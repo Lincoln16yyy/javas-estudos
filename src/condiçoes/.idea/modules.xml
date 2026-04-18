@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../NivelBasico/NivelBasico.iml" filepath="$PROJECT_DIR$/../NivelBasico/NivelBasico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Nivel_intermediario/Nivel_intermediario.iml" filepath="$PROJECT_DIR$/../Nivel_intermediario/Nivel_intermediario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/condiçoes.iml" filepath="$PROJECT_DIR$/condiçoes.iml" />
+    </modules>
+  </component>
+</project>
