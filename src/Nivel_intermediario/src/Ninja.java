@@ -3,10 +3,7 @@ public class Ninja {
     String aldeia;
     int idade;
 
-    //criar um metodo publico
-    public void SharinganAtivado(){
-        System.out.println("O sharingan ativou");
-    }
+
 
     //metodo string vai ter que retornar uma string
     public String euSouUmNinja(){
