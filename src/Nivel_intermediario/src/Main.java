@@ -5,6 +5,14 @@ public class Main {
         Sasuke.idade=18;
         Sasuke.aldeia="aldeia da folha";
 
+
+        Ninja Naruto = new Ninja();
+        Naruto.nome="Naruto Uzumaki";
+        Naruto.idade=18;
+        Naruto.aldeia="aldeia da folha";
+
+
+
         //aplicar metodos ao obejto
         Sasuke.SharinganAtivado();
         String chamandoMetodo = Sasuke.euSouUmNinja();
