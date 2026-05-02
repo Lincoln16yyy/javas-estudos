@@ -16,6 +16,34 @@ public class Main {
         Naruto.idade= 18;
         Naruto.modoSabioAtivado();
 
+        //objeto 3
+        Haruno Sakura = new Haruno();
+        Sakura.nome="Sakura haruno";
+        Sakura.aldeia="Aldeia da folha";
+        Sakura.idade= 18;
+        Sakura.poderDeCura();
+
+        //objeto 4
+        Hyuga Hinata = new Hyuga();
+        Hinata.nome="Hinata hyuga";
+        Hinata.aldeia="Aldeia da folha";
+        Hinata.idade= 18;
+        Hinata.byakuganAtivado();
+
+        //objeto 5
+        Boruto Boruto = new Boruto();
+        Boruto.nome="Boruto Hyuga Uzumaki";
+        Boruto.aldeia="Aldeia da folha";
+        Boruto.idade= 9;
+        Boruto.AtivarKarma();
+        Boruto.AtivarJougan();
+        Boruto.modoSabioAtivado();
+
+
+
+
+
+
 
 
     }
