@@ -1,43 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        //objeto 1
-       Uchiha Sasuke = new Uchiha();
-       Sasuke.nome="Sasuke Uchiha";
-       Sasuke.aldeia="Aldeia da folha";
-       Sasuke.idade = 18;
-       Sasuke.SharinganAtivado();
+       Hokages Hashirama = new Hokages();
+       Hashirama.idade= 45;
 
+       Hokages Tobirama = new Hokages("Tobirama");
+        System.out.println(Tobirama.nome);
 
-         //objeto 2
-        Uzumaki Naruto = new Uzumaki();
-        Naruto.nome="Naruto Uzumaki";
-        Naruto.aldeia="Aldeia da folha";
-        Naruto.idade= 18;
-        Naruto.modoSabioAtivado();
+        Hokages Hiruzen = new Hokages(40);
+        System.out.println(Hiruzen.idade);
 
-        //objeto 3
-        Haruno Sakura = new Haruno();
-        Sakura.nome="Sakura haruno";
-        Sakura.aldeia="Aldeia da folha";
-        Sakura.idade= 18;
-        Sakura.poderDeCura();
+        Hokages Minato = new Hokages("Minato", 30, false);
+        System.out.println(Minato.nome);
+        System.out.println(Minato.idade);
+        System.out.println(Minato.vivoOuNao);
 
-        //objeto 4
-        Hyuga Hinata = new Hyuga();
-        Hinata.nome="Hinata hyuga";
-        Hinata.aldeia="Aldeia da folha";
-        Hinata.idade= 18;
-        Hinata.byakuganAtivado();
-
-        //objeto 5
-        Boruto Boruto = new Boruto();
-        Boruto.nome="Boruto Hyuga Uzumaki";
-        Boruto.aldeia="Aldeia da folha";
-        Boruto.idade= 9;
-        Boruto.AtivarKarma();
-        Boruto.AtivarJougan();
-        Boruto.modoSabioAtivado();
 
 
 
