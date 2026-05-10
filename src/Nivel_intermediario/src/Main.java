@@ -1,19 +1,20 @@
 public class Main {
     public static void main(String[] args) {
+        //obj sasuke
+        Uchiha sasuke = new Uchiha();
+        sasuke.nome="Sasuke Uchiha";
+        sasuke.aldeia="Aldeia da folha";
+        sasuke.idade=18;
+        sasuke.SharinganAtivado();
 
-       Hokages Hashirama = new Hokages();
-       Hashirama.idade= 45;
+        //obje kakashi
+        Hatake Kakashi = new Hatake();
+        Kakashi.nome="Kakashi Hatake";
+        Kakashi.aldeia="Aldeia da folha";
+        Kakashi.idade=48;
+        Kakashi.SharinganAtivado();
 
-       Hokages Tobirama = new Hokages("Tobirama");
-        System.out.println(Tobirama.nome);
 
-        Hokages Hiruzen = new Hokages(40);
-        System.out.println(Hiruzen.idade);
-
-        Hokages Minato = new Hokages("Minato", 30, false);
-        System.out.println(Minato.nome);
-        System.out.println(Minato.idade);
-        System.out.println(Minato.vivoOuNao);
 
 
 

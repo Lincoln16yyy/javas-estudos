@@ -24,3 +24,6 @@ public class Hokages {
 
 
 }
+
+void main() {
+}
