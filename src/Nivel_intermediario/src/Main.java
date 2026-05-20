@@ -1,16 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class Main {
     static void main(String[] args) {
+        //array
+        String[] ninjasArray = new String[3];
+        ninjasArray[0] = "Naruto Uzumaki";
 
-        equipamentosNinjas Kunai =new equipamentosNinjas("kunai de ferro");
-        equipamentosNinjas Shuriken =new equipamentosNinjas("Shuriken de ferro");
-        equipamentosNinjas pergaminho =new equipamentosNinjas("pergaminho");
+        //Listas
+        List<String> ninjasList = new ArrayList<>();
+        ninjasList.add("Naruto Uzumaki");
 
-        bolsaGenerica <equipamentosNinjas> bolsa = new bolsaGenerica<>();
-        bolsa.adicionarEquipamento(Kunai);
-        bolsa.adicionarEquipamento(Shuriken);
-        bolsa.adicionarEquipamento(pergaminho);
+        //Stack
+        Stack<String> ninjasStack = new Stack<>();
+        ninjasStack.add("Naruto Uzumaki");
+        ninjasStack.push("Sasuke Uchiha");
+        ninjasStack.push("Sakura Haruno");
 
-        System.out.println(bolsa);
+        System.out.println("Minha Stack é: "+ ninjasStack);
+        ninjasStack.pop();
+        System.out.println("Minha Stack atualizada é: "+ ninjasStack);
+        System.out.println("Minha Stack com o peak: "+ ninjasStack.peek());
+
 
 
     }
