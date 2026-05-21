@@ -1,76 +1,42 @@
-import java.util.*;
+// Arquivo: Main.java
 
 public class Main {
-    static void main(String[] args) {
-        //array
-        String[] ninjasArray = new String[3];
-        ninjasArray[0] = "Naruto Uzumaki";
+    public static void main(String[] args) {
+        // Instanciando o gerenciador que criamos no outro arquivo
+        GerenciadorNinjas sistema = new GerenciadorNinjas();
 
-        //Listas
-        List<String> ninjasList = new ArrayList<>();
-        ninjasList.add("Naruto Uzumaki");
+        // 1. Adicionando os sete ninjas iniciais
+        sistema.adicionar(new Ninja("Naruto Uzumaki", 16, "Folha"));
+        sistema.adicionar(new Ninja("Sasuke Uchiha", 16, "Folha"));
+        sistema.adicionar(new Ninja("Gaara", 16, "Areia"));
+        sistema.adicionar(new Ninja("Shikamaru Nara", 16, "Folha"));
+        sistema.adicionar(new Ninja("Killer Bee", 35, "Nuvem"));
+        sistema.adicionar(new Ninja("Mei Terumi", 31, "Névoa"));
+        sistema.adicionar(new Ninja("Kurotsuchi", 18, "Pedra"));
 
-        //Stack
-        Stack<String> ninjasStack = new Stack<>();
-        ninjasStack.add("Naruto Uzumaki");
-        ninjasStack.push("Sasuke Uchiha");
-        ninjasStack.push("Sakura Haruno");
+        System.out.println("--- Lista Inicial ---");
+        sistema.exibirTodos();
 
-        System.out.println("Minha Stack é: "+ ninjasStack);
-        ninjasStack.pop();
-        System.out.println("Minha Stack atualizada é: "+ ninjasStack);
-        System.out.println("Minha Stack com o peak: "+ ninjasStack.peek());
-
-        //QUEUE // FILAS
-
-        Queue<String> ninjasQueue = new LinkedList<>();
-        ninjasQueue.add("Naruto Uzumaki");
-        ninjasQueue.add("Sasuke Uchiha");
-        ninjasQueue.add("Sakura");
-        ninjasQueue.add("Kakashi");
-        ninjasQueue.add("Shikamaru");
-
-        //Mostrar QUEUE
-
-        System.out.println("Minha Queue é: "+ ninjasQueue);
-
-        //Tirar um ninja da fila
-
-        ninjasQueue.poll();
-        System.out.println("Minha Queue atualizada é: "+ ninjasQueue);
-
-        //como ver quem é o primeiro
-
-        System.out.println("Ninja no head da fila: "+ ninjasQueue.peek());
-
-        //adicionar ninjas a fila
-
-        ninjasQueue.add("Hashirama Senju");
-        ninjasQueue.add("Tobirama Senju");
-
-        System.out.println("Minha Queue atualizada é: "+ ninjasQueue);
-
-        //verificar se a fila esta vazia
-        if (ninjasQueue.isEmpty()){
-            System.out.println("A fila está vazia");
-        }else {
-            System.out.println("A fila não está vazia");
-        }
-        //esvaziar fila
-        ninjasQueue.clear();
-        System.out.println("Minha Queue vazia é: "+ ninjasQueue);
-
-        if (ninjasQueue.isEmpty()){
-            System.out.println("A fila está vazia");
-        }else {
-            System.out.println("A fila não está vazia");
+        // 2. Remover o primeiro ninja da lista
+        Ninja removido = sistema.removerPrimeiro();
+        if (removido != null) {
+            System.out.println("\n[Operação] Removendo o primeiro ninja: " + removido.nome);
         }
 
+        // 3. Adicionar um novo ninja no início
+        Ninja novoNinja = new Ninja("Kakashi Hatake", 30, "Folha");
+        sistema.adicionarNoInicio(novoNinja);
+        System.out.println("\n[Operação] Adicionando novo ninja no início: " + novoNinja.nome);
 
+        // 4. Acessar um ninja em uma posição específica
+        int posicaoBusca = 2;
+        Ninja acessado = sistema.acessar(posicaoBusca);
+        if (acessado != null) {
+            System.out.println("\n[Operação] Acessando o ninja na posição " + posicaoBusca + ": " + acessado.nome);
+        }
 
-
-
-
-
+        // 5. Exibir a lista completa
+        System.out.println("\n--- Lista Completa Atualizada ---");
+        sistema.exibirTodos();
     }
 }
