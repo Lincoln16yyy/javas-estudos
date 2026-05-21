@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     static void main(String[] args) {
@@ -22,6 +20,55 @@ public class Main {
         ninjasStack.pop();
         System.out.println("Minha Stack atualizada é: "+ ninjasStack);
         System.out.println("Minha Stack com o peak: "+ ninjasStack.peek());
+
+        //QUEUE // FILAS
+
+        Queue<String> ninjasQueue = new LinkedList<>();
+        ninjasQueue.add("Naruto Uzumaki");
+        ninjasQueue.add("Sasuke Uchiha");
+        ninjasQueue.add("Sakura");
+        ninjasQueue.add("Kakashi");
+        ninjasQueue.add("Shikamaru");
+
+        //Mostrar QUEUE
+
+        System.out.println("Minha Queue é: "+ ninjasQueue);
+
+        //Tirar um ninja da fila
+
+        ninjasQueue.poll();
+        System.out.println("Minha Queue atualizada é: "+ ninjasQueue);
+
+        //como ver quem é o primeiro
+
+        System.out.println("Ninja no head da fila: "+ ninjasQueue.peek());
+
+        //adicionar ninjas a fila
+
+        ninjasQueue.add("Hashirama Senju");
+        ninjasQueue.add("Tobirama Senju");
+
+        System.out.println("Minha Queue atualizada é: "+ ninjasQueue);
+
+        //verificar se a fila esta vazia
+        if (ninjasQueue.isEmpty()){
+            System.out.println("A fila está vazia");
+        }else {
+            System.out.println("A fila não está vazia");
+        }
+        //esvaziar fila
+        ninjasQueue.clear();
+        System.out.println("Minha Queue vazia é: "+ ninjasQueue);
+
+        if (ninjasQueue.isEmpty()){
+            System.out.println("A fila está vazia");
+        }else {
+            System.out.println("A fila não está vazia");
+        }
+
+
+
+
 
 
 
