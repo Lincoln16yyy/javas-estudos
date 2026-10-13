@@ -12,6 +12,7 @@ Repositório com os exercícios e mini-projetos que faço enquanto estudo **Java
 | [`NivelBasico`](src/NivelBasico) | Fundamentos | Arrays, menu interativo no terminal, `while` + `switch` |
 | [`Nivel_intermediario`](src/Nivel_intermediario) | Orientação a objetos e coleções | Classes, `enum`, generics, `LinkedList`, `ArrayList`, `toString()` |
 | [`Biblioteca`](src/Biblioteca) | Mini-projeto | Sistema de empréstimos de uma biblioteca escolar |
+| [`PraticaPOO02_Encapsulamento`](src/PraticaPOO02_Encapsulamento) | Encapsulamento POO | Gestão financeira de contas estudantis, imutabilidade, SRP, DIP, acoplamento |
 
 ## 🗂️ Estrutura
 
@@ -38,10 +39,15 @@ javas-estudos/
     │   ├── linked_List.java
     │   ├── chamaromain.java
     │   └── Main.java
-    └── Biblioteca/
-        ├── Livro.java
-        ├── Leitor.java
-        ├── Emprestimo.java
+    ├── Biblioteca/
+    │   ├── Livro.java
+    │   ├── Leitor.java
+    │   ├── Emprestimo.java
+    │   ├── Main.java
+    │   └── README.md
+    └── PraticaPOO02_Encapsulamento/
+        ├── Aluno.java
+        ├── ContaEstudantil.java
         ├── Main.java
         └── README.md
 ```
@@ -84,11 +90,34 @@ Simulação do controle de empréstimos de uma biblioteca escolar, com quatro cl
 
 Mais detalhes no [README do módulo](src/Biblioteca/README.md).
 
+### `PraticaPOO02_Encapsulamento` — Gestão Financeira de Contas Estudantis
+Implementação de um módulo de gestão financeira aplicando **Encapsulamento**, com análise de conceitos avançados:
+
+| Classe | Responsabilidade |
+| --- | --- |
+| `Aluno` | Entidade com matrícula imutável, nome e e-mail mutáveis. `exibirPerfil()` formata dados. |
+| `ContaEstudantil` | Conta com número imutável, saldo, titular (Aluno) e limite de crédito. Operações: `depositar`, `pagar` (com limite), `transferir` (usa pagar+depositar). |
+| `Main` | Testes: instância, depósito inválido/válido, pagamento usando limite, transferência entre contas, análise de vazamento de encapsulamento, SRP, acoplamento. |
+
+**Conceitos avançados analisados no código:**
+- **Vazamento de encapsulamento:** `getTitular()` retorna referência direta → solução: cópia defensiva/DTO imutável
+- **SRP:** Lógica de e-mail em `pagar()` viola responsabilidade única → solução: `NotificacaoService` + Observer
+- **Acoplamento:** `transferir(ContaEstudantil)` é aceitável; com API externa violaria DIP → solução: Interface + Injeção de Dependência
+
+Mais detalhes no [README do módulo](src/PraticaPOO02_Encapsulamento/README.md).
+
 ## ▶️ Como executar
 
 **Pré-requisito:** JDK instalado. Os projetos foram criados com o **JDK 26** no IntelliJ IDEA. Alguns arquivos usam `static void main` sem `public`, o que exige uma versão recente (JDK 25 ou superior).
 
 Cada módulo é independente, então compile e execute dentro da pasta dele.
+
+**PraticaPOO02_Encapsulamento**
+```bash
+cd src/PraticaPOO02_Encapsulamento
+javac *.java
+java Main
+```
 
 **Biblioteca**
 ```bash
