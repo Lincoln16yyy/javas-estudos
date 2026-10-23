@@ -13,6 +13,7 @@ Repositório com os exercícios e mini-projetos que faço enquanto estudo **Java
 | [`Nivel_intermediario`](src/Nivel_intermediario) | Orientação a objetos e coleções | Classes, `enum`, generics, `LinkedList`, `ArrayList`, `toString()` |
 | [`Biblioteca`](src/Biblioteca) | Mini-projeto | Sistema de empréstimos de uma biblioteca escolar |
 | [`PraticaPOO02_Encapsulamento`](src/PraticaPOO02_Encapsulamento) | Encapsulamento POO | Gestão financeira de contas estudantis, imutabilidade, SRP, DIP, acoplamento |
+| [`Project`](src/Project) | Orientação a objetos | Entidade de domínio com campos privados, construtor, `Instant` e `describe()` |
 
 ## 🗂️ Estrutura
 
@@ -45,11 +46,13 @@ javas-estudos/
     │   ├── Emprestimo.java
     │   ├── Main.java
     │   └── README.md
-    └── PraticaPOO02_Encapsulamento/
-        ├── Aluno.java
-        ├── ContaEstudantil.java
-        ├── Main.java
-        └── README.md
+    ├── PraticaPOO02_Encapsulamento/
+    │   ├── Aluno.java
+    │   ├── ContaEstudantil.java
+    │   ├── Main.java
+    │   └── README.md
+    └── Project/
+        └── Project.java
 ```
 
 ## 🔎 Detalhes de cada módulo
@@ -105,6 +108,20 @@ Implementação de um módulo de gestão financeira aplicando **Encapsulamento**
 - **Acoplamento:** `transferir(ContaEstudantil)` é aceitável; com API externa violaria DIP → solução: Interface + Injeção de Dependência
 
 Mais detalhes no [README do módulo](src/PraticaPOO02_Encapsulamento/README.md).
+
+### `Project` — Entidade de domínio
+Primeira modelagem de uma entidade de projeto, com todos os campos `private` (encapsulamento):
+
+| Membro | Descrição |
+| --- | --- |
+| `id` | Identificador (`Long`), ainda sem valor definido |
+| `name` | Nome do projeto |
+| `description` | Descrição do projeto |
+| `createdAt` | Data/hora de criação (`Instant`), ainda sem valor definido |
+| `Project(name, description)` | Construtor que recebe apenas nome e descrição |
+| `describe()` | Junta nome e descrição em uma `String` (`name - description`) |
+
+O módulo ainda não tem `main`: a classe serve de base para as próximas práticas.
 
 ## ▶️ Como executar
 
