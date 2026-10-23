@@ -119,6 +119,7 @@ Primeira modelagem de uma entidade de projeto, com todos os campos `private` (en
 | `description` | Descrição do projeto |
 | `createdAt` | Data/hora de criação (`Instant`), ainda sem valor definido |
 | `Project(name, description)` | Construtor que recebe apenas nome e descrição |
+| `getId()`, `getName()`, `getDescription()`, `getCreatedAt()` | Getters que expõem cada campo de forma controlada |
 | `describe()` | Junta nome e descrição em uma `String` (`name - description`) |
 
 O módulo ainda não tem `main`: a classe serve de base para as próximas práticas.
