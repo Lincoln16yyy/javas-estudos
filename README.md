@@ -14,6 +14,7 @@ Repositório com os exercícios e mini-projetos que faço enquanto estudo **Java
 | [`Biblioteca`](src/Biblioteca) | Mini-projeto | Sistema de empréstimos de uma biblioteca escolar |
 | [`PraticaPOO02_Encapsulamento`](src/PraticaPOO02_Encapsulamento) | Encapsulamento POO | Gestão financeira de contas estudantis, imutabilidade, SRP, DIP, acoplamento |
 | [`Project`](src/Project) | Orientação a objetos | Entidade de domínio com campos privados, construtor, `Instant` e `describe()` |
+| [`AV01_ControleDeProdutos`](src/AV01_ControleDeProdutos) | Atividade avaliativa | Encapsulamento, validação de dados e controle de estoque |
 
 ## 🗂️ Estrutura
 
@@ -49,6 +50,10 @@ javas-estudos/
     ├── PraticaPOO02_Encapsulamento/
     │   ├── Aluno.java
     │   ├── ContaEstudantil.java
+    │   ├── Main.java
+    │   └── README.md
+    ├── AV01_ControleDeProdutos/
+    │   ├── Produto.java
     │   ├── Main.java
     │   └── README.md
     └── Project/
@@ -124,6 +129,18 @@ Primeira modelagem de uma entidade de projeto, com todos os campos `private` (en
 
 O módulo ainda não tem `main`: a classe serve de base para as próximas práticas.
 
+### `AV01_ControleDeProdutos` — Atividade Avaliativa I
+Sistema simples de controle de estoque de uma pequena loja, feito para a AV01 de POO:
+
+| Classe | Responsabilidade |
+| --- | --- |
+| `Produto` | Atributos `private` (`nome`, `codigo`, `preco`, `quantidade`), getters/setters com validação, `exibirInformacoes()`, `adicionarEstoque()` e `removerEstoque()`. |
+| `Main` | Cria dois produtos, exibe os dados e testa adição, remoção, estoque insuficiente e valores inválidos. |
+
+**Encapsulamento:** nenhum atributo é acessado diretamente fora da classe. Os setters recusam nome vazio, código menor ou igual a zero, preço negativo e quantidade negativa; a remoção de estoque só ocorre quando há saldo suficiente.
+
+Mais detalhes no [README do módulo](src/AV01_ControleDeProdutos/README.md).
+
 ## ▶️ Como executar
 
 **Pré-requisito:** JDK instalado. Os projetos foram criados com o **JDK 26** no IntelliJ IDEA. Alguns arquivos usam `static void main` sem `public`, o que exige uma versão recente (JDK 25 ou superior).
@@ -141,6 +158,13 @@ java Main
 ```bash
 cd src/Biblioteca
 javac *.java
+java Main
+```
+
+**AV01_ControleDeProdutos**
+```bash
+cd src/AV01_ControleDeProdutos
+javac Produto.java Main.java
 java Main
 ```
 
